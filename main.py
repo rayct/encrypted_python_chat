@@ -4,7 +4,7 @@ import threading
 import rsa
 
 
-choice = input("Do you want to host (1) or to Connect (2): ")
+choice = input("Do you want to host (1) or Connect (2): ")
 
 if choice == "1":
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
