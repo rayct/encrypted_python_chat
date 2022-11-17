@@ -33,7 +33,7 @@ def receiving_messages(c):
         print("Partner: " + c.recv(1024).decode())
     
     
-    threading.Thread(target=sending_messages, args=(client,))
-    threading.Thread(target=receiving_messages, args=(client,))
+    threading.Thread(target=sending_messages, args=(client,)).start()
+    threading.Thread(target=receiving_messages, args=(client,)).start()
     
     
